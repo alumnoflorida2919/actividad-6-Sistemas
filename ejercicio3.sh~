@@ -1,0 +1,17 @@
+read -p "escribe una nota: " nota
+while [ $nota -lt 0 ] || [ $nota -gt 10 ]; do
+    read -p "escribe una nota: " nota
+  
+done
+  if [ $nota -lt 5 ]; then
+	echo "Suspendido"
+    elif [ $nota -lt 6 ]; then
+	echo "Suficiente"
+    elif [ $nota -lt 7 ] && [ $nota -ge 6 ]; then
+	 echo "bien"
+    elif [ $nota -ge 7 ] && [ $nota -lt 10 ]; then
+	echo "Notable"
+    else
+	echo "Sobresaliente"
+
+    fi
